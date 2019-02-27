@@ -1,0 +1,12 @@
+form {
+	padding: 20px;
+}
+
+h1, h2, h3 {
+	padding-bottom: 0px;
+	padding: 20px;
+}
+
+.center {
+	text-align: center;
+}

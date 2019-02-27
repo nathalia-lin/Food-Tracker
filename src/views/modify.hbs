@@ -1,0 +1,24 @@
+<div class="center">
+  <h2> MODIFY </h2>
+  <form method="POST" action="">
+    <div class="form-group row">
+      <label for="food" class="col-sm-2 col-form-label">Food</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="food" value={{food.food}}>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="price" class="col-sm-2 col-form-label">Price</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="price" value={{food.price}}>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="calories" class="col-sm-2 col-form-label">Calories</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="calories" value={{food.calories}}>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+  </form>
+</div>

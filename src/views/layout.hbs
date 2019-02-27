@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>HappyEats</title>
+	<link rel="stylesheet" href="/css/base.css" type="text/css" media="screen" title="no title">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" type="text/css" media="screen" title="no title">
+	<!-- <link rel="stylesheet" href="bundle.js" type="text/css" media="screen" title="no title">
+	<link rel="stylesheet" href="client.js" type="text/css" media="screen" title="no title"> -->
+
+</head>
+<body>
+	<nav class="navbar navbar-expand navbar-dark bg-dark">
+		<a class="navbar-brand" href="/">HAPPYEATS</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		{{#if user}}
+		<div class="collapse navbar-collapse" id="navbarsExample02">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="/add">ADD</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/details">DETAILS</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+        		<li>
+        			<a class="nav-link" href="/logout">LOGOUT</a>
+        		</li>
+        	</ul>
+		</div>
+		{{else}}
+		<div class="collapse navbar-collapse" id="navbarsExample02">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="/login">LOGIN</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/register">REGISTER</a>
+				</li>
+			</ul>
+		</div>
+		{{/if}}
+	</nav>
+
+	<div class='bottom'>
+		{{{body}}}
+	</div>
+
+</body>
+
+
+
+<footer>
+	{{#if user}}
+	<div class="navbar fixed-bottom">
+		{{#if user.username}}
+			<a>Logged in as: {{user.username}}</a>
+		{{else}}
+			<a>Logged in as: {{user}}</a>
+		{{/if}}
+
+		<div id="background"></div>
+	</div>
+	{{/if}}
+</footer>
+
+</html>

@@ -1,0 +1,35 @@
+<h2> ADD FOOD </h2>
+
+{{#if message}}
+<div class="error">{{ message }}</div>
+{{/if}}
+
+<div>
+  <form method="POST" action="add">
+    <div class="form-group row">
+      <label for="food" class="col-sm-2 col-form-label">Food</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="food" value="" placeholder="Enter food">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="price" class="col-sm-2 col-form-label">Price</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="price" value="" placeholder="Price">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="calories" class="col-sm-2 col-form-label">Calories</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" name="calories" value="" placeholder="Calories">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="date" class="col-sm-2 col-form-label">Date</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" name="date" value="" placeholder="Date">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

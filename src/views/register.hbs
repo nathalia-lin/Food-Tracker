@@ -1,0 +1,27 @@
+<div class="center">
+	<h2>Register</h2>
+	
+	{{#if message}}
+	<div class="error">{{ message }}</div>
+	{{/if}}
+
+	<form method="POST" action="register">
+		<div>
+			<label for="username">Username:</label>
+			<input type="text" name="username" value="">
+		</div>
+		<div>
+			<label for="password">Password:</label>
+			<input type="password" name="password" value="">
+		</div>
+		<div>
+			<label for="calorie">Daily Calorie Intake:</label>
+			<input type="number" name="calories" value="">
+		</div>
+		<div>
+			<label for="budget">Daily Expense:</label>
+			<input type="number" name="budget" value="">
+		</div>
+		<div><input type="submit" value="Register"></div>
+	</form>
+</div>

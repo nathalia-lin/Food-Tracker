@@ -1,0 +1,39 @@
+<h2> DETAILS </h2>
+
+{{#if message}}
+<div class="error">{{message}}</div>
+{{/if}}
+ 
+
+<table class="table">
+  {{#each day}}
+  <thead class="thead-dark">
+    <tr>
+      <th <h3>{{date}}</h3> </th></br>
+      <th scope="col">Food</th>
+      <th scope="col">Price</th>
+      <th scope="col">Calories</th>
+    </tr>
+  </thead>
+
+    <tbody>
+      {{#each details}}
+        <tr>  
+          <td> </td>
+          <td> {{food}} </td>
+          <td> {{price}} </td>
+          <td> {{calories}} </td>
+          <td> </td>
+
+          <td>
+            <form method="GET">
+              <button><a href="/delete/{{_id}}"> DELETE </a></button>
+              <button><a href="/modify/{{_id}}"> MODIFY </a></button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+    {{/each}} 
+</table>
+
